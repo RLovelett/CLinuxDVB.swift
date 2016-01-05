@@ -1,4 +1,4 @@
-module CDVB [system] {
+module CLinuxDVB [system] {
     module Audio {
       header "/usr/include/linux/dvb/audio.h"
     }
