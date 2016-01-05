@@ -1,0 +1,27 @@
+module CDVB [system] {
+    module Audio {
+      header "/usr/include/linux/dvb/audio.h"
+    }
+    module CA {
+      header "/usr/include/linux/dvb/ca.h"
+    }
+    module DMX {
+      header "/usr/include/linux/dvb/dmx.h"
+    }
+    module FrontEnd {
+      header "/usr/include/linux/dvb/frontend.h"
+    }
+    module Net {
+      header "/usr/include/linux/dvb/net.h"
+    }
+    module OSD {
+      header "/usr/include/linux/dvb/osd.h"
+    }
+    module Version {
+      header "/usr/include/linux/dvb/version.h"
+    }
+    module Video {
+      header "/usr/include/linux/dvb/video.h"
+    }
+}
+
