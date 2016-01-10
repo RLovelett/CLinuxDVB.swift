@@ -58,22 +58,22 @@ int _swift_frontend_read_uncorrected_blocks(int fd, uint32_t *ublocks) {
 }
 
 extern inline
-int _swift_frontend_set_frontend(int fd, dvb_frontend_parameters *p) {
+int _swift_frontend_set_frontend(int fd, struct dvb_frontend_parameters *p) {
   return ioctl(fd, FE_SET_FRONTEND, p);
 }
 
 extern inline
-int _swift_frontend_get_frontend(int fd, dvb_frontend_parameters *p) {
+int _swift_frontend_get_frontend(int fd, struct dvb_frontend_parameters *p) {
   return ioctl(fd, FE_GET_FRONTEND, p);
 }
 
 extern inline
-int _swift_frontend_get_event(int fd, dvb_frontend_event *ev) {
+int _swift_frontend_get_event(int fd, struct dvb_frontend_event *ev) {
   return ioctl(fd, FE_GET_EVENT, ev);
 }
 
 extern inline
-int _swift_frontend_get_info(int fd, dvb_frontend_info *info) {
+int _swift_frontend_get_info(int fd, struct dvb_frontend_info *info) {
   return ioctl(fd, FE_GET_INFO, info);
 }
 
@@ -83,12 +83,12 @@ int _swift_frontend_diseqc_reset_overload(int fd) {
 }
 
 extern inline
-int _swift_frontend_diseqc_send_master_cmd(int fd, dvb_diseqc_master_cmd *cmd) {
+int _swift_frontend_diseqc_send_master_cmd(int fd, struct dvb_diseqc_master_cmd *cmd) {
   return ioctl(fd, FE_DISEQC_SEND_MASTER_CMD, cmd);
 }
 
 extern inline
-int _swift_frontend_diseqc_recv_slave_reply(int fd, dvb_diseqc_slave_reply *reply) {
+int _swift_frontend_diseqc_recv_slave_reply(int fd, struct dvb_diseqc_slave_reply *reply) {
   return ioctl(fd, FE_DISEQC_RECV_SLAVE_REPLY, reply);
 }
 
