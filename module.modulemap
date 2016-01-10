@@ -1,5 +1,7 @@
+module SwiftIoctl [system] {
+    header "Misc.c"
+}
 module CLinuxDVB [system] {
-    header "wrapper.h"
     module Audio {
       header "/usr/include/linux/dvb/audio.h"
     }
