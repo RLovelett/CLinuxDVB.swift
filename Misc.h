@@ -26,7 +26,30 @@
 // linux/dvb/dmx.h
 //===----------------------------------------------------------------------===//
 
-// TODO
+extern inline
+int _swift_dmx_start(int fd) {
+  return ioctl(fd, DMX_START);
+}
+
+extern inline
+int _swift_dmx_stop(int fd) {
+  return ioctl(fd, DMX_STOP);
+}
+
+extern inline
+int _swift_dmx_set_filter(int fd, struct dmx_sct_filter_params *params) {
+  return ioctl(fd, DMX_SET_FILTER, params);
+}
+
+extern inline
+int _swift_dmx_set_pes_filter(int fd, struct dmx_pes_filter_params *params) {
+  return ioctl(fd, DMX_SET_PES_FILTER, params);
+}
+
+extern inline
+int _swift_dmx_set_buffer_size(int fd, unsigned long size) {
+  return ioctl(fd, DMX_SET_BUFFER_SIZE, size);
+}
 
 //===----------------------------------------------------------------------===//
 // linux/dvb/frontend.h
