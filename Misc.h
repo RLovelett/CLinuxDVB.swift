@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <sys/ioctl.h>
 
 /* DVB Card Drivers */
